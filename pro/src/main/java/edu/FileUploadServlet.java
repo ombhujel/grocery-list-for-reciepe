@@ -58,7 +58,7 @@ public class FileUploadServlet extends HttpServlet {
       }
 
     //String message = "File Uploaded Successfully!";
-    String content = new Scanner(new File(uploadFilePath + File.separator + fileName)).useDelimiter("\\Z").next();  
+    //String content = new Scanner(new File(uploadFilePath + File.separator + fileName)).useDelimiter("\\Z").next();  
     
         
     /****** Integrate remote DB connection with this servlet, uncomment and modify the code below *******
@@ -68,7 +68,7 @@ public class FileUploadServlet extends HttpServlet {
     DBTest_Demo DBConnect_instance = new DBTest_Demo();
 	DBConnect_instance.testconnection_mysql(fileName, IS);
     
-	response.getWriter().write(content); 
+	response.getWriter().write("Successufully Uploaded"); 
       //request.setAttribute("message", "File uploaded successfully!");
       //getServletContext().getRequestDispatcher("/response.jsp").forward(
            //request, response);
@@ -93,7 +93,7 @@ public class FileUploadServlet extends HttpServlet {
       return "";
   }
   
-  
+  /**
 	private void writeToResponse(HttpServletResponse resp, String results) throws IOException {
 		PrintWriter writer = new PrintWriter(resp.getOutputStream());
 		resp.setContentType("text/plain");
@@ -105,6 +105,7 @@ public class FileUploadServlet extends HttpServlet {
 		}
 		writer.close();
 	}	
+	*/
 	
 	
 }
