@@ -13,8 +13,8 @@ import org.json.JSONObject;
 public class API {
 
     public String[][] APII(String x) throws IOException, InterruptedException {
-        String id = "8d4bd308";
-        String key = "5a02ab2c5dade098c39f10849d7f3237";
+        String id = "ac.............8";
+        String key = "5a0................................d7f3237";
         String food = x;
         String food1 = new String(food.replace(" ", "%20"));
         var url = "https://api.edamam.com/api/recipes/v2?type=public&q=" + food1 + "&app_id=" + id + "&app_key=" + key
