@@ -27,7 +27,7 @@ public class login extends HttpServlet {
 		RequestDispatcher disp = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/filerepo","filerepo","filerepo");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:XXXX/filerepo","XXXXXXXX","XXXXXXXXXXX");
 			PreparedStatement p = con.prepareStatement("select * from user where email = ? and password = ?");
 			p.setString(1, email);
 			p.setString(2, password);
